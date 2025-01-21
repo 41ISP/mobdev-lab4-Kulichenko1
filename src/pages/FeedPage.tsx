@@ -1,5 +1,7 @@
 import Button from "../components/Button";
-const FeedPage = () => {
+import "../shared/api.ts";
+import fetchdata from "../shared/api.ts";
+const FeedPage = () => { 
     const onClick = () => {}
     return(
         <div className="feedform">

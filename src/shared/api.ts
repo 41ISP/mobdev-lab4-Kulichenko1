@@ -10,4 +10,4 @@ const fetchdata = async() => {
         console.log(error);
     }
 }
-fetchdata();
+export default fetchdata();
