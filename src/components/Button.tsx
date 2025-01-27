@@ -4,7 +4,7 @@ const Button = ({onClick}: {onClick:() => void}) => {
          onClick()
     }
     return(
-      <button className="button" onClick={Hendleclick}>Избранное!</button>            
+      <button className="button" onClick={Hendleclick}>Избранное</button>            
     )
     
 }

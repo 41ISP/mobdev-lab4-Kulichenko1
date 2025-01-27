@@ -1,0 +1,12 @@
+.cats {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    justify-content: center;
+    text-align: center;
+    margin: 5%;
+}

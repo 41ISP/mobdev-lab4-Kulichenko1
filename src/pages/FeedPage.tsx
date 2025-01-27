@@ -3,14 +3,16 @@ import Button from "../components/Button";
 import "../shared/api.ts";
 import CatApi from "../shared/api.ts";
 import { useState } from "react";
-import { ICatImage } from "../entities/catFacts/catFacts.rdo.ts";
+import { ICatBreed } from "../entities/catFacts/catFacts.rdo.ts";
+import "./FeedPage.css"
+import CatContainer from "../components/CatContainer/CatContainer.tsx";
 
 const FeedPage = () => {
     const [id, setId] = useState();
     const [url, setUrl] = useState();
     const [width, setWidth] = useState();
     const [height, setHeight] = useState();
-    const [images, setImages] = useState<ICatImage[]>([])
+    const [images, setImages] = useState<ICatBreed[]>([])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -25,13 +27,16 @@ const FeedPage = () => {
     }
 
     return (
-        
-        <div className="feedform">
-            <Button onClick={onClick}></Button>
-        const ListItems = catsimgs.map((catsimgs) => 
-                <li>{catsimgs}</li>
+
+        <div className="cats">
+            {
+                images.map((catsimgs) => (
+                <CatContainer {...catsimgs}/>
+                )
+                )
+            }
         </div>
-        
+
     )
 
 }
